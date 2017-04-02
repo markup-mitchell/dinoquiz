@@ -5,7 +5,7 @@ import './App.css';
 
 class App extends Component {
 
-   handler() {
+  speciesHandler() {
         console.log("handler invoked");
     }
 
@@ -15,7 +15,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Dinosaur Quiz</h2>
-          <SpeciesButton />
+          <SpeciesButton handler={this.speciesHandler} />
         </div>
       </div>
     );

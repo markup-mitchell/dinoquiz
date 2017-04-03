@@ -20,6 +20,7 @@ class App extends Component {
           <AnswerButton className="Species-button" value={"Tyrannosaurus Rex"} handler={this.speciesHandler} />
           <AnswerButton className="Species-button" value={"Stegosaurus"} handler={this.speciesHandler} />
           <AnswerButton className="Species-button" value={"Triceratops"} handler={this.speciesHandler} />
+          <AnswerButton className="Diet-button" value={"Plants"} handler={this.speciesHandler} />
         </div>
       </div>
     );

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './dinologo.png';
 import AnswerButton from './SpeciesButton';
 import './App.css';
+import BigImage from './BigImage';
 
 class App extends Component {
 
@@ -21,6 +22,7 @@ class App extends Component {
           <AnswerButton className="Species-button" value={"Stegosaurus"} handler={this.speciesHandler} />
           <AnswerButton className="Species-button" value={"Triceratops"} handler={this.speciesHandler} />
           <AnswerButton className="Diet-button" value={"Plants"} handler={this.speciesHandler} />
+          <BigImage src="./Stegosaurus_BW.jpg" alt="Stegosaurus" />
         </div>
       </div>
     );

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class AnswerButton extends Component {
+class SpeciesButton extends Component {
     render() {
         return(
             <button onClick={this.props.handler.bind(this)}>
@@ -10,4 +10,4 @@ class AnswerButton extends Component {
     }
 }
 
-export default AnswerButton;
+export default SpeciesButton;

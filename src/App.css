@@ -1,14 +1,20 @@
+.Species-button {
+  color: pink;
+  background-color: #965;
+  font-size: large;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  /* animation: App-logo-spin infinite 20s linear; */
   height: 180px;
 }
 
 .App-header {
-  background-color: #565;
+  background-color: #965;
   height: 150px;
   padding: 20px;
   color: black;
@@ -22,3 +28,4 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+

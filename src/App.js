@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import logo from './dinologo.png';
-import SpeciesButton from './SpeciesButton';
+import AnswerButton from './SpeciesButton';
 import './App.css';
 
 class App extends Component {
 
   speciesHandler() {
-        console.log("handler invoked");
+        console.log(this.props.value);
     }
 
   render() {
@@ -14,8 +14,12 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Dinosaur Quiz</h2>
-          <SpeciesButton handler={this.speciesHandler} />
+          <h1>
+              Dinosaur Quiz
+          </h1>
+          <AnswerButton className="Species-button" value={"Tyrannosaurus Rex"} handler={this.speciesHandler} />
+          <AnswerButton className="Species-button" value={"Stegosaurus"} handler={this.speciesHandler} />
+          <AnswerButton className="Species-button" value={"Triceratops"} handler={this.speciesHandler} />
         </div>
       </div>
     );

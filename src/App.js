@@ -3,6 +3,7 @@ import logo from './dinologo.png';
 import AnswerButton from './SpeciesButton';
 import './App.css';
 import BigImage from './BigImage';
+import DINOSAURS from './Dinosaurs';
 
 class App extends Component {
 
@@ -15,13 +16,15 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1>
+         <h1>
               Dinosaur Quiz
           </h1>
-          <AnswerButton className="Species-button" value={"Tyrannosaurus Rex"} handler={this.speciesHandler} />
+          <AnswerButton className="Species-button" value={DINOSAURS.Tyrannosaurus.period} handler={this.speciesHandler} />
           <AnswerButton className="Species-button" value={"Stegosaurus"} handler={this.speciesHandler} />
           <AnswerButton className="Species-button" value={"Triceratops"} handler={this.speciesHandler} />
           <AnswerButton className="Diet-button" value={"Plants"} handler={this.speciesHandler} />
+          <div className="button-box">
+          </div>
           <BigImage src="./Stegosaurus_BW.jpg" alt="Stegosaurus" />
         </div>
       </div>

@@ -1,29 +1,27 @@
-import React, {Component} from 'react';
-
 const DINOSAURS = { 
 
-    "#Template" : {
+    Template : {
 
-        "commonName" : "#",
-        "suborder" : "#",
-        "diet" : "#",
-        "period" : "#"
+        commonName : "#",
+        suborder : "#",
+        diet : "#",
+        period : "#"
     },
 
-    "Tyrannosaurus" : {
+    Tyrannosaurus : {
 
-        "commonName" : "Tyrannosaurus",
-        "suborder" : "Theropoda",
-        "diet" : "Carnivore",
-        "period" : "Cretaceous"
+        commonName : "Tyrannosaurus",
+        suborder : "Theropoda",
+        diet : "Carnivore",
+        period : "Cretaceous"
     },
 
-    "Spinosaurus" : {
+    Spinosaurus : {
 
-        "commonName" : "Spinosaurus",
-        "suborder" : "Theropoda",
-        "diet" : "Carnivore",
-        "period" : "Cretaceous"
+        commonName : "Spinosaurus",
+        suborder : "Theropoda",
+        diet : "Carnivore",
+        period : "Cretaceous"
     }
 }
 

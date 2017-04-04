@@ -19,11 +19,11 @@ class App extends Component {
          <h1>
               Dinosaur Quiz
           </h1>
+          <div className="button-box">
           <AnswerButton className="Species-button" value={DINOSAURS.Tyrannosaurus.period} handler={this.speciesHandler} />
           <AnswerButton className="Species-button" value={"Stegosaurus"} handler={this.speciesHandler} />
           <AnswerButton className="Species-button" value={"Triceratops"} handler={this.speciesHandler} />
           <AnswerButton className="Diet-button" value={"Plants"} handler={this.speciesHandler} />
-          <div className="button-box">
           </div>
           <BigImage src="./Stegosaurus_BW.jpg" alt="Stegosaurus" />
         </div>

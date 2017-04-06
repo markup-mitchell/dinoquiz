@@ -1,8 +1,6 @@
 .button-box {
     position: relative;
     background-color: pink;
-    width: 200px;
-    height: 300px;
 }
 .Species-button {
   background-color: coral;

@@ -13,8 +13,14 @@ class App extends Component {
             species : [
                 'Tyrannosaurus',
                 'Stegosaurus',
-                'Triceratops'
-            ]
+                'Triceratops',
+                'Spinosaurus',
+                'Akylosaurus',
+                'Pachycephalosaurus'
+            ],
+
+            currentPick : this.species[0];
+
         }
     }
 
@@ -32,12 +38,11 @@ class App extends Component {
             </h1>
             <div className="button-box">
                 {
-                    this.state.species.map((item, i) => <AnswerButton className="Species-button" value={item} handler={this.speciesHandler} />)
+                    this.state.species.sort().map((item, i) => <AnswerButton className="Species-button" value={item} handler={this.speciesHandler} />)
                 }
             </div>
-            <BigImage src="./Stegosaurus_BW.jpg" alt="Stegosaurus" />
         </div>
-        </div>
+    </div>
         );
     }
     }

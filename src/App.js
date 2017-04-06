@@ -13,13 +13,19 @@ class App extends Component {
             species : [
                 'Tyrannosaurus',
                 'Stegosaurus',
-                'Triceratops',
-                'Spinosaurus',
-                'Akylosaurus',
-                'Pachycephalosaurus'
+                'Coelophysis',
+                'Brachiosaurus',
+                'Ankylosaurus',
+                'Edmontonia',
+                'Lambeosaurus'
             ],
 
-            currentPick : this.species[0];
+            get random() { // This is not ideal. Investigate combining get and set.
+                return this.species[Math.floor(Math.random()*this.species.length)]
+            },
+            get imageSrc(){ // ... or use a separate method to explicitly create a default prop on load.
+                return './images/'+this.random+'.jpg'
+            },
 
         }
     }
@@ -38,9 +44,10 @@ class App extends Component {
             </h1>
             <div className="button-box">
                 {
-                    this.state.species.sort().map((item, i) => <AnswerButton className="Species-button" value={item} handler={this.speciesHandler} />)
+                    this.state.species.sort().map((item, i) => <AnswerButton className="Species-button" value={item} handler={this.speciesHandler} key={i} />)
                 }
             </div>
+            <BigImage src={this.state.imageSrc} />
         </div>
     </div>
         );

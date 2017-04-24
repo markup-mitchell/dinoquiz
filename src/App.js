@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import AnswerButton from './SpeciesButton';
+import AnswerButton from './AnswerButton';
 import './App.css';
 import DINOSAURS from './Dinosaurs';
-
-function BigImage(props) {
-        return (
-            <img src={require(props.src)} alt={props.alt} />
-        )
-};
+import BigImage from './BigImage';
 
 class App extends Component {
 

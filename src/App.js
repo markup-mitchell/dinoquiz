@@ -19,6 +19,8 @@ class App extends Component {
                 'Edmontonia',
                 'Lambeosaurus'
             ],
+          // all the above should be coming in via Dinoraurs component
+          // currentPick: 
 
             get random() { // This is not ideal. Investigate combining get and set.
                 return this.species[Math.floor(Math.random()*this.species.length)]
@@ -42,10 +44,11 @@ class App extends Component {
             <h1>
                 Dinosaur Quiz
             </h1>
+            <h2>{this.state.random}</h2>
             <div className="button-box">
                 {
-                    this.state.species.sort().map((item, i) => <AnswerButton className="Species-button" value={item} handler={this.speciesHandler} key={i} />)
-                }
+                  this.state.species.sort().map((item, i) => <AnswerButton className="Species-button" value={item} handler={this.speciesHandler} key={i} />)
+              }
             </div>
             <BigImage src={this.state.imageSrc} />
         </div>

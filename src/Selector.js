@@ -8,8 +8,9 @@ function Selector(props) {
               value={species} 
               onClick={props.clickHandler.bind(null, species)} 
               key={species}
-              className="Species-button"
-          > {species} </button>
+              className="Species-button">
+          {species}
+          </button>
         )
         }
       </ul>

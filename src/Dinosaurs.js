@@ -22,21 +22,19 @@ const DINOSAURS =
     },
 
     Edmontonia : {
-
         commonName : "#",
         suborder : "#",
         diet : "#",
         period : "#"
     },
-    Lambeosaurus : {
 
+    Lambeosaurus : {
         commonName : "#",
         suborder : "#",
         diet : "#",
         period : "#"
     },
     Brachiosaurus : {
-
         commonName : "#",
         suborder : "#",
         diet : "#",
@@ -72,7 +70,7 @@ const DINOSAURS =
         suborder : "Theropoda",
         diet : "Carnivore",
         period : "Cretaceous"
-    }
+    },
 }
 
 export default DINOSAURS;

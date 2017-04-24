@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import AnswerButton from './AnswerButton';
 import './App.css';
 import DINOSAURS from './Dinosaurs';
 import BigImage from './BigImage';
-
+import Selector from './Selector';
 class App extends Component {
 
   constructor() {
@@ -22,17 +21,7 @@ class App extends Component {
   render() {
       return (
       <div className="App">
-
-        <div className="board">
-          { this.state.species.map((species) => 
-            <AnswerButton 
-              value={species} 
-              className="Species-button" 
-              handler={this.clickHandler.bind(this)} 
-              key={species} 
-            />) 
-          }
-        </div>
+        <Selector clickHandler={this.clickHandler.bind(this)} species={this.state.species} />
         <BigImage src={'./images/'+this.state.currentSelection+'.jpg'} />
       </div>
       );

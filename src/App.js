@@ -3,7 +3,7 @@ import './App.css';
 import DINOSAURS from './Dinosaurs';
 import BigImage from './BigImage';
 import Selector from './Selector';
-import PropTypes from 'prop-types';
+
 class App extends Component {
 
   constructor() {
@@ -13,7 +13,7 @@ class App extends Component {
         species: Object.keys(DINOSAURS)
       }
   }
-
+  
   clickHandler(value) {
     this.setState({currentSelection: value});
   }

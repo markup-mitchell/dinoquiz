@@ -1,19 +1,21 @@
 img {
-    max-width: 700px;
-    height: auto;
+  max-width: 700px;
+  height: auto;
 }
 
 .image-board {
-    /* position: relative; */
-    float: left;
+  /* position: relative; */
+  float: left;
 }
 
 .button-board {
-    float: left;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    background-color: pink;
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  /* width: 200px; */
+  background-color: pink;
 }
 .Species-button {
   float: left;

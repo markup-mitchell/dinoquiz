@@ -2,7 +2,14 @@ import React from 'react';
 
 function Selector(props) {
     return (
-      <ul>
+      <div className='button-board'>
+        
+          <button 
+            className="Species-button" 
+            onClick={props.pickRandom.bind(null, props.species)}>
+            Random
+          </button>
+
         { props.species.map((species) => 
           <button
               value={species} 
@@ -13,7 +20,7 @@ function Selector(props) {
           </button>
         )
         }
-      </ul>
+      </div>
     )
   }
 

@@ -12,7 +12,7 @@ class App extends Component {
         species: Object.keys(DINOSAURS)
       }
   }
-  
+
   clickHandler(value) {
     this.setState({currentSelection: value});
   }
@@ -24,8 +24,7 @@ class App extends Component {
   render() {
       return (
       <div className="App">
-        <button className="Species-button" onClick={this.pickRandom.bind(this, this.state.species)}>Random</button>
-        <Selector clickHandler={this.clickHandler.bind(this)} species={this.state.species} />
+        <Selector clickHandler={this.clickHandler.bind(this)} species={this.state.species} pickRandom={this.pickRandom.bind(this)}/>
         <BigImage src={'./images/'+this.state.currentSelection+'.jpg'} />
       </div>
       );

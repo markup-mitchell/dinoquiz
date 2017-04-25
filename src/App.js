@@ -3,6 +3,7 @@ import './App.css';
 import DINOSAURS from './Dinosaurs';
 import BigImage from './BigImage';
 import Selector from './Selector';
+import PropTypes from 'prop-types';
 class App extends Component {
 
   constructor() {
@@ -17,19 +18,25 @@ class App extends Component {
     this.setState({currentSelection: value});
   }
 
-  pickRandom(array) { // pass random pick to setState
-    this.clickHandler(array[Math.floor(Math.random() * array.length)]);
+  pickRandom(array) { // pass 'random' pick to setState
+    let nextPick =  array[Math.floor(Math.random() * array.length)];
+    nextPick === this.state.currentSelection ? // avoids replicating current selection but destroys reusability of function
+      this.pickRandom(array)
+      :
+      this.clickHandler(nextPick); // the use of clickHandler also limits applicablility
   }
 
   render() {
       return (
       <div className="App">
-        <Selector clickHandler={this.clickHandler.bind(this)} species={this.state.species} pickRandom={this.pickRandom.bind(this)}/>
-        <BigImage src={'./images/'+this.state.currentSelection+'.jpg'} />
+        <Selector
+          clickHandler={this.clickHandler.bind(this)}
+          species={this.state.species}
+          pickRandom={this.pickRandom.bind(this)}/>
+        <BigImage
+          src={'./images/'+this.state.currentSelection+'.jpg'} />
       </div>
       );
   }
 }
-
-
     export default App;

@@ -9,7 +9,7 @@ function BigImage(props) {
   )
 };
 
-BigImage.propTypes = {
+igImage.propTypes = {
   src: PropTypes.string.isRequired
 }
 

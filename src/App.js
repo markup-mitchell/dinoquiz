@@ -7,13 +7,13 @@ import Selector from './Selector';
 class App extends Component {
 
   constructor() {
-      super();
-      this.state = {
-        currentSelection: 'egg',
-        species: Object.keys(DINOSAURS)
-      }
+    super();
+    this.state = {
+      currentSelection: 'egg',
+      species: Object.keys(DINOSAURS)
+    };
   }
-  
+
   clickHandler(value) {
     this.setState({currentSelection: value});
   }
@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   render() {
-      return (
+    return (
       <div className="App">
         <Selector
           clickHandler={this.clickHandler.bind(this)}
@@ -36,7 +36,7 @@ class App extends Component {
         <BigImage
           src={'./images/'+this.state.currentSelection+'.jpg'} />
       </div>
-      );
+    );
   }
 }
-    export default App;
+export default App;

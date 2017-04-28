@@ -1,13 +1,37 @@
 img {
-    max-width: 700px;
-    height: auto;
+  max-width: 700px;
+  height: auto;
 }
 
-.button-box {
-    position: relative;
-    background-color: pink;
+body {
+    font-family: 
+      -apple-system, 
+      BlinkMacSystemFont,
+      Sergoe UI,
+      Roboto,
+      Oxygen-Sans,
+      Ubuntu,
+      Cantarell,
+      Helvetica Neue,
+      sans-serif;
+}
+
+.image-board {
+  /* position: relative; */
+  /* float: left; */
+}
+
+.button-board {
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  /* width: 200px; */
+  background-color: pink;
 }
 .Species-button {
+  float: left;
   background-color: coral;
   font-size: 1.5em;
   cursor: pointer;

@@ -1,60 +1,42 @@
 import React, { Component } from 'react';
-import logo from './dinologo.png';
-import AnswerButton from './SpeciesButton';
 import './App.css';
-import BigImage from './BigImage';
 import DINOSAURS from './Dinosaurs';
+import BigImage from './BigImage';
+import Selector from './Selector';
 
 class App extends Component {
 
-    constructor() {
-        super();
-        this.state = {
-            species : [
-                'Tyrannosaurus',
-                'Stegosaurus',
-                'Coelophysis',
-                'Brachiosaurus',
-                'Ankylosaurus',
-                'Edmontonia',
-                'Lambeosaurus'
-            ],
-          // all the above should be coming in via Dinoraurs component
-          // currentPick: 
+  constructor() {
+      super();
+      this.state = {
+        currentSelection: 'egg',
+        species: Object.keys(DINOSAURS)
+      }
+  }
+  
+  clickHandler(value) {
+    this.setState({currentSelection: value});
+  }
 
-            get random() { // This is not ideal. Investigate combining get and set.
-                return this.species[Math.floor(Math.random()*this.species.length)]
-            },
-            get imageSrc(){ // ... or use a separate method to explicitly create a default prop on load.
-                return './images/'+this.random+'.jpg'
-            },
+  pickRandom(array) { // pass 'random' pick to setState
+    let nextPick =  array[Math.floor(Math.random() * array.length)];
+    nextPick === this.state.currentSelection ? // avoids replicating current selection but destroys reusability of function
+      this.pickRandom(array)
+      :
+      this.clickHandler(nextPick); // the use of clickHandler also limits applicablility
+  }
 
-        }
-    }
-
-    speciesHandler() {
-            console.log(this.props.value);
-        }
-
-    render() {
-        return (
-        <div className="App">
-            <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1>
-                Dinosaur Quiz
-            </h1>
-            <h2>{this.state.random}</h2>
-            <div className="button-box">
-                {
-                  this.state.species.sort().map((item, i) => <AnswerButton className="Species-button" value={item} handler={this.speciesHandler} key={i} />)
-              }
-            </div>
-            <BigImage src={this.state.imageSrc} />
-        </div>
-    </div>
-        );
-    }
-    }
-
+  render() {
+      return (
+      <div className="App">
+        <Selector
+          clickHandler={this.clickHandler.bind(this)}
+          species={this.state.species}
+          pickRandom={this.pickRandom.bind(this)}/>
+        <BigImage
+          src={'./images/'+this.state.currentSelection+'.jpg'} />
+      </div>
+      );
+  }
+}
     export default App;

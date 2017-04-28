@@ -71,6 +71,23 @@ const DINOSAURS =
         diet : "Carnivore",
         period : "Cretaceous"
     },
+    
+    Pterodactyl : {
+
+        commonName: "",
+        suborder: "",
+        diet: "",
+        period: ""
+    },
+
+    Keir : {
+        
+      commonName: "Keir",
+      suborder : "Boy",
+      diet : "gnocchi",
+      period: "modern"
+    }
+    
 }
 
 export default DINOSAURS;

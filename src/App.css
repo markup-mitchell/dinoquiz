@@ -3,9 +3,22 @@ img {
   height: auto;
 }
 
+body {
+    font-family: 
+      -apple-system, 
+      BlinkMacSystemFont,
+      Sergoe UI,
+      Roboto,
+      Oxygen-Sans,
+      Ubuntu,
+      Cantarell,
+      Helvetica Neue,
+      sans-serif;
+}
+
 .image-board {
   /* position: relative; */
-  float: left;
+  /* float: left; */
 }
 
 .button-board {

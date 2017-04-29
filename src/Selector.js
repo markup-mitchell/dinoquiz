@@ -21,13 +21,13 @@ function Selector(props) {
       )
     }
     </div>
-  )
+  );
 }
 
 Selector.propTypes = {
   clickHandler: PropTypes.func.isRequired,
   species: PropTypes.array.isRequired,
   pickRandom: PropTypes.func.isRequired
-}
+};
 
 module.exports = Selector;

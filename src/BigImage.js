@@ -6,11 +6,11 @@ function BigImage(props) {
     <div className='image-board'>
       <img src={require(props.src)} alt={props.alt} />
     </div>
-  )
-};
-
-igImage.propTypes = {
-  src: PropTypes.string.isRequired
+  );
 }
+
+BigImage.propTypes = {
+  src: PropTypes.string.isRequired
+};
 
 module.exports = BigImage;

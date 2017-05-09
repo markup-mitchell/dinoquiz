@@ -10,7 +10,8 @@ function BigImage(props) {
 }
 
 BigImage.propTypes = {
-  src: PropTypes.string.isRequired
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
 };
 
-module.exports = BigImage;
+export default BigImage;

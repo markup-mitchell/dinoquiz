@@ -34,7 +34,7 @@ class App extends Component {
           species={this.state.species}
           pickRandom={this.pickRandom.bind(this)}/>
         <BigImage
-          src={'./images/'+this.state.currentSelection+'.jpg'} />
+          src={'./images/'+this.state.currentSelection+'.jpg'} alt={this.state.currentSelection} />
       </div>
     );
   }

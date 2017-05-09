@@ -30,4 +30,4 @@ Selector.propTypes = {
   pickRandom: PropTypes.func.isRequired
 };
 
-module.exports = Selector;
+export default Selector;
